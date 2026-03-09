@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News - Ultimate Schooling | Breaking News & Updates</title>
+    
+    <meta name="title" content="Latest News - Ultimate Schooling | Breaking News & Updates">
+    <meta name="description" content="Stay updated with latest breaking news, stories, and educational updates at Ultimate Schooling.">
+    <meta name="keywords" content="latest news, breaking news, education updates, school news">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://ultimateschooling.com/latest-news.html" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Latest News - Ultimate Schooling">
+    <meta property="og:description" content="Stay updated with latest breaking news and stories.">
+    <meta property="og:url" content="https://ultimateschooling.com/latest-news.html">
+    <meta property="og:site_name" content="Ultimate Schooling">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Latest News - Ultimate Schooling">
+    <meta name="twitter:description" content="Stay updated with latest breaking news and stories.">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📰</text></svg>">
+    <link rel="stylesheet" href="/style.css?v=4.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Latest News",
+      "url": "https://ultimateschooling.com/latest-news.html",
+      "description": "Latest breaking news, stories, and educational updates.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ultimate Schooling"
+      }
+    }
+    </script>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+</head>
+<body>
+    <script>if(localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');</script>
+
+    <div class="top-ticker-bar">
+        <div class="container ticker-container">
+            <span class="ticker-label"><i class="fas fa-fire"></i> TRENDING NEWS</span>
+            <div class="ticker-content-wrapper">
+                <div class="ticker-content" id="hot-news-ticker"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header" style="margin-bottom: 0;">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 2.5rem;">📰</span>
+                        <h1 style="font-size: 1.8rem;">Ultimate Schooling</h1>
+                    </a>
+                </div>
+                <div class="header-socials" style="display: flex; align-items: center; gap: 15px;">
+                    <li class="search-icon" style="list-style: none;"><a href="#" aria-label="Search" style="color: #666; font-size: 1.1rem;"><i class="fas fa-search"></i></a></li>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="utility-bar">
+        <div class="container utility-bar-inner">
+            <!-- Social Icons on Left -->
+            <div class="utility-socials">
+                <a href="https://facebook.com/ultimateschooling" target="_blank" class="btn-fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/ultimateschooling" target="_blank" class="btn-tw" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/ultimateschooling" target="_blank" class="btn-in" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            <!-- Navigation Center -->
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul style="display: flex; list-style: none; gap: 30px; align-items: center; justify-content: center;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tech.html">Tech</a></li>
+                    <li><a href="latest-news.html" class="active" aria-current="page">Latest News</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Night Mode on Right -->
+            <div class="top-actions">
+                <button id="dark-mode-toggle" title="Toggle Dark Mode" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <section class="page-title" style="background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);">
+        <div class="container">
+            <h2 style="color: #fff;">🔥 Latest News</h2>
+        </div>
+    </section>
+
+    <main class="container main-content">
+        <div class="news-articles" id="latest-news-container"></div>
+    </main>
+
+    <footer class="footer" style="background: #2c3e50; padding: 40px 0 20px; margin-top: 60px; border-top: none;">
+        <div class="container">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin-bottom: 20px; font-weight: 500;">
+                <a href="about.html" style="color: #fff; text-decoration: none;">About Us</a>
+                <a href="contact.html" style="color: #fff; text-decoration: none;">Contact Us</a>
+                <a href="privacy.html" style="color: #fff; text-decoration: none;">Privacy Policy</a>
+                <a href="terms.html" style="color: #fff; text-decoration: none;">Terms & Conditions</a>
+                <a href="dmca.html" style="color: #fff; text-decoration: none;">DMCA</a>
+            </div>
+            <div class="copyright" style="text-align: center; color: rgba(255,255,255,0.8); font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px;">
+                <p>&copy; 2026 Ultimate Schooling - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js?v=4.0"></script>
+</body>
+</html>

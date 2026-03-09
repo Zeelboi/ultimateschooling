@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /articles/
+Allow: /sitemap.xml
+
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+Sitemap: https://ultimateschooling.online/sitemap.xml
+
+Crawl-delay: 1

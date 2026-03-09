@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Tools & Calculators | Code, Binary, Unit Converters | Ultimate Schooling</title>
+    
+    <meta name="title" content="Tech Tools & Calculators | Code, Binary, Unit Converters | Ultimate Schooling">
+    <meta name="description" content="Free tech tools and calculators: binary to decimal, hexadecimal converter, code formatter, unit converters, and development tools.">
+    <meta name="keywords" content="tech tools, binary calculator, hex converter, unit converter, code formatter, developer tools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ultimateschooling.online/calculators.html" />
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔧</text></svg>">
+    <link rel="stylesheet" href="style.css?v=4.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .calc-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+        .section-header {
+            text-align: center;
+            margin: 50px 0 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px dashed #eee;
+            transition: border-color 0.3s ease;
+        }
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: #222;
+            transition: color 0.3s ease;
+        }
+        .section-header p {
+            color: #666;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        @media(max-width: 992px) {
+            .calc-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media(max-width: 768px) {
+            .calc-grid { grid-template-columns: 1fr; }
+        }
+
+        .calc-card {
+            background: #fff;
+            padding: 30px 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            border-top: 5px solid #2c3e9c;
+        }
+        .calc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .calc-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #2c3e9c;
+            transition: color 0.3s ease;
+        }
+
+        .calc-title {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 25px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .form-group { margin-bottom: 18px; }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: #555;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .form-group select, .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.3s ease;
+            background: #fff;
+            color: #333;
+        }
+        .form-group select:focus, .form-group input:focus { 
+            border-color: #2c3e9c; 
+        }
+
+        .calc-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #2c3e9c, #1a2a6c);
+            color: #fff;
+            border: none;
+            padding: 14px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: auto;
+        }
+        .calc-btn:hover { 
+            opacity: 0.9; 
+            transform: scale(1.02); 
+        }
+
+        .result-box {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+        .res-highlight {
+            font-size: 1.4rem;
+            font-weight: 700;
+            display: block;
+            margin-top: 5px;
+            color: #2c3e9c;
+            transition: color 0.3s ease;
+        }
+
+        /* Dark mode styles for calculators */
+        [data-theme="dark"] .calc-card {
+            background: #1e1e1e !important;
+            border-top-color: #4a6cf7 !important;
+        }
+        [data-theme="dark"] .calc-icon {
+            color: #4a6cf7 !important;
+        }
+        [data-theme="dark"] .calc-title {
+            color: #fff !important;
+        }
+        [data-theme="dark"] .section-header h2 {
+            color: #fff !important;
+        }
+        [data-theme="dark"] .section-header p {
+            color: #ccc !important;
+        }
+        [data-theme="dark"] .section-header {
+            border-bottom-color: #333 !important;
+        }
+        [data-theme="dark"] .form-group label {
+            color: #ccc !important;
+        }
+        [data-theme="dark"] .form-group select,
+        [data-theme="dark"] .form-group input {
+            background: #2a2a2a !important;
+            border-color: #444 !important;
+            color: #fff !important;
+        }
+        [data-theme="dark"] .form-group select:focus,
+        [data-theme="dark"] .form-group input:focus {
+            border-color: #4a6cf7 !important;
+        }
+        [data-theme="dark"] .result-box {
+            background: #2a2a2a !important;
+            border-color: #444 !important;
+            color: #ccc !important;
+        }
+        [data-theme="dark"] .res-highlight {
+            color: #4a6cf7 !important;
+        }
+    </style>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+</head>
+<body>
+    <!-- DARK MODE SCRIPT - FIXED -->
+    <script>
+        if(localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
+    <div class="top-ticker-bar">
+        <div class="container ticker-container">
+            <span class="ticker-label"><i class="fas fa-code"></i> TECH TIPS</span>
+            <div class="ticker-content-wrapper">
+                <div class="ticker-content" id="hot-news-ticker"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;"><h1>💻 Ultimate Schooling</h1></a>
+                </div>
+                 <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tech-news.html">Tech News</a></li>
+                        <!-- <li><a href="ai-ml.html">AI & ML</a></li> -->
+                        <!-- <li><a href="programming.html">Programming</a></li> -->
+                        <!-- <li><a href="web-dev.html">Web Dev</a></li> -->
+                        <li><a href="calculators.html" class="active">Tools</a></li>
+                        <li class="search-icon"><a href="#" aria-label="Search"><i class="fas fa-search"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="utility-bar">
+        <div class="container utility-bar-inner">
+            <div class="utility-left">
+                <span id="current-date-display" class="date-display"></span>
+            </div>
+            <div class="utility-right">
+                <div class="top-actions">
+                    <button id="dark-mode-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container calc-wrapper">
+
+        <div class="section-header">
+            <h2>🔢 Number System Converters</h2>
+            <p>Binary, Decimal, Hexadecimal & Octal converters.</p>
+        </div>
+
+        <div class="calc-grid">
+            <div class="calc-card">
+                <div class="calc-icon"><i class="fas fa-calculator"></i></div>
+                <h3 class="calc-title">Binary to Decimal</h3>
+                <div class="form-group">
+                    <label>Binary Number</label>
+                    <input type="text" id="binary-input" placeholder="e.g. 1010">
+                </div>
+                <button class="calc-btn" onclick="convertBinaryToDecimal()">Convert</button>
+                <div class="result-box" id="binary-result"></div>
+            </div>
+
+            <div class="calc-card">
+                <div class="calc-icon"><i class="fas fa-code"></i></div>
+                <h3 class="calc-title">Decimal to Binary</h3>
+                <div class="form-group">
+                    <label>Decimal Number</label>
+                    <input type="number" id="decimal-input" placeholder="e.g. 42">
+                </div>
+                <button class="calc-btn" onclick="convertDecimalToBinary()">Convert</button>
+                <div class="result-box" id="decimal-result"></div>
+            </div>
+
+            <div class="calc-card">
+                <div class="calc-icon"><i class="fas fa-hashtag"></i></div>
+                <h3 class="calc-title">Hex to Decimal</h3>
+                <div class="form-group">
+                    <label>Hexadecimal</label>
+                    <input type="text" id="hex-input" placeholder="e.g. 2F">
+                </div>
+                <button class="calc-btn" onclick="convertHexToDecimal()">Convert</button>
+                <div class="result-box" id="hex-result"></div>
+            </div>
+        </div>
+
+        <div class="section-header" style="margin-top: 60px;">
+            <h2>📏 Unit Converters</h2>
+            <p>Length, Weight, Temperature & Data units.</p>
+        </div>
+
+        <div class="calc-grid">
+            <div class="calc-card">
+                <div class="calc-icon"><i class="fas fa-ruler"></i></div>
+                <h3 class="calc-title">Length Converter</h3>
+                <div class="form-group">
+                    <label>From</label>
+                    <select id="length-from">
+                        <option value="m">Meters (m)</option>
+                        <option value="cm">Centimeters (cm)</option>
+                        <option value="km">Kilometers (km)</option>
+                        <option value="in">Inches (in)</option>
+                        <option value="ft">Feet (ft)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>To</label>
+                    <select id="length-to">
+                        <option value="m">Meters (m)</option>
+                        <option value="cm">Centimeters (cm)</option>
+                        <option value="km">Kilometers (km)</option>
+                        <option value="in">Inches (in)</option>
+                        <option value="ft">Feet (ft)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Value</label>
+                    <input type="number" id="length-value" step="any" placeholder="e.g. 10">
+                </div>
+                <button class="calc-btn" onclick="convertLength()">Convert</button>
+                <div class="result-box" id="length-result"></div>
+            </div>
+
+            <div class="calc-card">
+                <div class="calc-icon"><i class="fas fa-weight"></i></div>
+                <h3 class="calc-title">Weight Converter</h3>
+                <div class="form-group">
+                    <label>From</label>
+                    <select id="weight-from">
+                        <option value="kg">Kilograms (kg)</option>
+                        <option value="g">Grams (g)</option>
+                        <option value="lb">Pounds (lb)</option>
+                        <option value="oz">Ounces (oz)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>To</label>
+                    <select id="weight-to">
+                        <option value="kg">Kilograms (kg)</option>
+                        <option value="g">Grams (g)</option>
+                        <option value="lb">Pounds (lb)</option>
+                        <option value="oz">Ounces (oz)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Value</label>
+                    <input type="number" id="weight-value" step="any" placeholder="e.g. 5">
+                </div>
+                <button class="calc-btn" onclick="convertWeight()">Convert</button>
+                <div class="result-box" id="weight-result"></div>
+            </div>
+
+            <div class="calc-card">
+                <div class="calc-icon"><i class="fas fa-database"></i></div>
+                <h3 class="calc-title">Data Storage</h3>
+                <div class="form-group">
+                    <label>From</label>
+                    <select id="data-from">
+                        <option value="b">Bytes (B)</option>
+                        <option value="kb">Kilobytes (KB)</option>
+                        <option value="mb">Megabytes (MB)</option>
+                        <option value="gb">Gigabytes (GB)</option>
+                        <option value="tb">Terabytes (TB)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>To</label>
+                    <select id="data-to">
+                        <option value="b">Bytes (B)</option>
+                        <option value="kb">Kilobytes (KB)</option>
+                        <option value="mb">Megabytes (MB)</option>
+                        <option value="gb">Gigabytes (GB)</option>
+                        <option value="tb">Terabytes (TB)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Value</label>
+                    <input type="number" id="data-value" step="any" placeholder="e.g. 1024">
+                </div>
+                <button class="calc-btn" onclick="convertData()">Convert</button>
+                <div class="result-box" id="data-result"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-socials">
+                <a href="#" class="share-btn btn-fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="share-btn btn-tw" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="share-btn btn-in" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="dmca.html">DMCA</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Ultimate Schooling - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Binary to Decimal
+        function convertBinaryToDecimal() {
+            let binary = document.getElementById('binary-input').value;
+            if(!binary) return;
+            let decimal = parseInt(binary, 2);
+            let res = document.getElementById('binary-result');
+            if(isNaN(decimal)) {
+                res.innerHTML = 'Invalid binary number';
+            } else {
+                res.innerHTML = `Decimal: <span class="res-highlight">${decimal}</span>`;
+            }
+            res.style.display = 'block';
+        }
+
+        // Decimal to Binary
+        function convertDecimalToBinary() {
+            let decimal = parseInt(document.getElementById('decimal-input').value);
+            if(isNaN(decimal)) return;
+            let binary = decimal.toString(2);
+            let res = document.getElementById('decimal-result');
+            res.innerHTML = `Binary: <span class="res-highlight">${binary}</span>`;
+            res.style.display = 'block';
+        }
+
+        // Hex to Decimal
+        function convertHexToDecimal() {
+            let hex = document.getElementById('hex-input').value;
+            if(!hex) return;
+            let decimal = parseInt(hex, 16);
+            let res = document.getElementById('hex-result');
+            if(isNaN(decimal)) {
+                res.innerHTML = 'Invalid hexadecimal';
+            } else {
+                res.innerHTML = `Decimal: <span class="res-highlight">${decimal}</span>`;
+            }
+            res.style.display = 'block';
+        }
+
+        // Length Converter
+        function convertLength() {
+            const from = document.getElementById('length-from').value;
+            const to = document.getElementById('length-to').value;
+            const value = parseFloat(document.getElementById('length-value').value);
+            if(isNaN(value)) return;
+            
+            const units = {
+                'm': 1,
+                'cm': 100,
+                'km': 0.001,
+                'in': 39.3701,
+                'ft': 3.28084
+            };
+            
+            let result = value / units[from] * units[to];
+            let res = document.getElementById('length-result');
+            res.innerHTML = `Result: <span class="res-highlight">${result.toFixed(4)}</span>`;
+            res.style.display = 'block';
+        }
+
+        // Weight Converter
+        function convertWeight() {
+            const from = document.getElementById('weight-from').value;
+            const to = document.getElementById('weight-to').value;
+            const value = parseFloat(document.getElementById('weight-value').value);
+            if(isNaN(value)) return;
+            
+            const units = {
+                'kg': 1,
+                'g': 1000,
+                'lb': 2.20462,
+                'oz': 35.274
+            };
+            
+            let result = value / units[from] * units[to];
+            let res = document.getElementById('weight-result');
+            res.innerHTML = `Result: <span class="res-highlight">${result.toFixed(4)}</span>`;
+            res.style.display = 'block';
+        }
+
+        // Data Converter
+        function convertData() {
+            const from = document.getElementById('data-from').value;
+            const to = document.getElementById('data-to').value;
+            const value = parseFloat(document.getElementById('data-value').value);
+            if(isNaN(value)) return;
+            
+            const units = {
+                'b': 1,
+                'kb': 1024,
+                'mb': 1048576,
+                'gb': 1073741824,
+                'tb': 1099511627776
+            };
+            
+            let result = value * units[from] / units[to];
+            let res = document.getElementById('data-result');
+            res.innerHTML = `Result: <span class="res-highlight">${result.toFixed(2)}</span>`;
+            res.style.display = 'block';
+        }
+    </script>
+    <script src="script.js?v=4.0"></script>
+</body>
+</html>

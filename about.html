@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Ultimate Schooling | Our Mission & Tech Experts</title>
+    
+    <meta name="title" content="About Us - Ultimate Schooling | Our Mission & Tech Experts">
+    <meta name="description" content="Learn about Ultimate Schooling's mission to provide reliable, expert-reviewed tech education and learning resources. Meet our team of dedicated writers and tech professionals.">
+    <meta name="keywords" content="about Ultimate Schooling, tech experts, programming guides, tech blog team, our mission">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ultimateschooling.online/about.html" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Us - Ultimate Schooling">
+    <meta property="og:description" content="Learn about Ultimate Schooling's mission to provide reliable, expert-reviewed tech education.">
+    <meta property="og:url" content="https://ultimateschooling.online/about.html">
+    <meta property="og:site_name" content="Ultimate Schooling">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link rel="stylesheet" href="style.css?v=4.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Ultimate Schooling",
+        "description": "Providing expert-reviewed tech education, programming tutorials, and learning resources.",
+        "url": "https://ultimateschooling.online/"
+      }
+    }
+    </script>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <style>
+        .about-content {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            line-height: 1.8;
+        }
+        
+        .about-content h3 {
+            color: #222;
+            margin: 30px 0 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .about-content p {
+            color: #444;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .about-content a {
+            color: #2c3e9c;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+        
+        [data-theme="dark"] .about-content {
+            background: #1e1e1e !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+        }
+        
+        [data-theme="dark"] .about-content h3 {
+            color: #fff !important;
+        }
+        
+        [data-theme="dark"] .about-content p {
+            color: #ccc !important;
+        }
+        
+        [data-theme="dark"] .about-content a {
+            color: #4a6cf7 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- DARK MODE SCRIPT - FIXED -->
+    <script>
+        if(localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+
+    <div class="top-ticker-bar">
+        <div class="container ticker-container">
+            <span class="ticker-label"><i class="fas fa-code"></i> TECH TIPS</span>
+            <div class="ticker-content-wrapper">
+                <div class="ticker-content" id="hot-news-ticker"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;"><h1>💻 Ultimate Schooling</h1></a>
+                </div>
+                 <nav class="main-nav" aria-label="Main Navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tech-news.html">Tech News</a></li>
+                        <!-- <li><a href="ai-ml.html">AI & ML</a></li> -->
+                        <!-- <li><a href="programming.html">Programming</a></li> -->
+                        <!-- <li><a href="web-dev.html">Web Dev</a></li> -->
+                        <li><a href="calculators.html">Tools</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="utility-bar">
+        <div class="container utility-bar-inner">
+            <div class="utility-left">
+                <span id="current-date-display" class="date-display"></span>
+            </div>
+            <div class="utility-right">
+                <div class="top-actions">
+                    <button id="dark-mode-toggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="page-title">
+        <div class="container">
+            <h2>📖 About Ultimate Schooling</h2>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="about-content">
+            <h3>Our Mission</h3>
+            <p>At Ultimate Schooling, our mission is simple: to make quality tech education accessible to everyone. We believe that learning programming, AI, and web development should be free, engaging, and practical. That's why we are dedicated to providing the most accurate, up-to-date, and easy-to-understand tech tutorials and guides for students, professionals, and enthusiasts alike.</p>
+
+            <h3>Why Trust Us?</h3>
+            <p>In a world full of outdated tutorials and misinformation, finding reliable tech education can be challenging. Ultimate Schooling stands out by ensuring that all our content is reviewed by industry experts. Our tutorials are thoroughly researched and designed to be easy to follow while maintaining technical accuracy and best practices.</p>
+            
+            <h3>Expert Contributions</h3>
+            <p>We are proud to feature insights and guidance from seasoned professionals. Many of our core programming and AI guides are guided by the expertise of professionals like <a href="author-prof-james.html">Prof. James Wilson</a>, a respected computer science educator with years of experience in software development and teaching.</p>
+
+            <h3>Join Our Learning Community</h3>
+            <p>Whether you're writing your first line of code, exploring machine learning, or building your first website, Ultimate Schooling is here to guide you every step of the way. Thank you for trusting us as your go-to resource for tech learning!</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-socials">
+                <a href="#" class="share-btn btn-fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="share-btn btn-tw" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="share-btn btn-in" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="dmca.html">DMCA</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Ultimate Schooling - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js?v=4.0"></script>
+</body>
+</html>
