@@ -7,6 +7,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px; /* Base for rem calculations */
 }
 
 body {
@@ -15,12 +16,14 @@ body {
     color: #333;
     background-color: #f8f9fa;
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
 }
 
 a {
@@ -44,6 +47,7 @@ a {
 .ticker-container {
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 .ticker-label {
@@ -109,19 +113,21 @@ a {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .logo h1 {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
     font-weight: 700;
     color: #1a1a1a;
     transition: color 0.3s ease;
+    line-height: 1.2;
 }
 
 .main-nav ul {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: clamp(15px, 3vw, 25px);
     align-items: center;
     flex-wrap: wrap;
 }
@@ -131,8 +137,19 @@ a {
     color: #444;
     padding: 5px 0;
     position: relative;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
     transition: color 0.3s ease;
+    display: inline-block;
+}
+
+/* Improve touch target */
+.main-nav a,
+.main-nav .fa-search {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-nav a:hover,
@@ -177,7 +194,7 @@ a {
 .date-display {
     color: #666;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
     transition: color 0.3s ease;
 }
 
@@ -185,13 +202,14 @@ a {
     display: flex;
     gap: 10px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .top-actions button {
     background: #f4f4f4;
     border: 1px solid #ddd;
     color: #333;
-    height: 32px;
+    height: 44px;
     padding: 0 12px;
     border-radius: 4px;
     cursor: pointer;
@@ -201,6 +219,7 @@ a {
     font-weight: 600;
     font-size: 0.85rem;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .top-actions button:hover {
@@ -211,7 +230,7 @@ a {
 
 #dark-mode-toggle {
     padding: 0;
-    width: 32px;
+    width: 44px;
     justify-content: center;
 }
 
@@ -224,7 +243,7 @@ a {
 }
 
 .page-title h2 {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
     font-weight: 600;
     color: #333;
     transition: color 0.3s ease;
@@ -293,7 +312,7 @@ a {
 }
 
 .news-title {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 3vw, 1.1rem);
     font-weight: 600;
     margin-bottom: 10px;
     line-height: 1.4;
@@ -355,14 +374,15 @@ a {
     justify-content: center;
     gap: 15px;
     margin-bottom: 25px;
+    flex-wrap: wrap;
 }
 
 .share-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     color: white;
     font-size: 1.1rem;
@@ -381,7 +401,7 @@ a {
 .footer-links {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: clamp(15px, 4vw, 25px);
     flex-wrap: wrap;
     margin-bottom: 20px;
     font-weight: 500;
@@ -391,6 +411,10 @@ a {
     color: #555;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: 0.9rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .footer-links a:hover {
@@ -416,6 +440,7 @@ a {
     padding-top: 20px;
     border-top: 1px solid #eee;
     transition: border-color 0.3s ease;
+    flex-wrap: wrap;
 }
 
 .page-btn {
@@ -426,6 +451,11 @@ a {
     border-radius: 4px;
     font-weight: 500;
     transition: all 0.3s ease;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .page-btn:hover {
@@ -486,6 +516,8 @@ a {
     display: none;
     z-index: 1001;
     animation: slideInLeft 0.5s;
+    max-width: calc(100vw - 40px);
+    word-break: break-word;
 }
 
 @keyframes bellPulse {
@@ -564,16 +596,18 @@ a {
     display: none;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 80px;
+    padding: 80px 20px 20px;
+    overflow-y: auto;
 }
 
 .search-modal {
-    width: 90%;
+    width: 100%;
     max-width: 650px;
     background: #fff;
     border-radius: 15px;
     overflow: hidden;
     transition: background-color 0.3s ease;
+    margin: auto;
 }
 
 .search-header {
@@ -588,22 +622,25 @@ a {
     flex: 1;
     border: none;
     outline: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 10px;
     background: transparent;
     transition: color 0.3s ease;
+    min-height: 44px;
 }
 
 .close-search-btn {
     font-size: 1.5rem;
     color: #999;
     cursor: pointer;
-    padding: 5px;
+    padding: 10px;
     transition: color 0.3s ease;
+    min-width: 44px;
+    text-align: center;
 }
 
 #search-results-list {
-    max-height: 450px;
+    max-height: 60vh;
     overflow-y: auto;
     padding: 10px;
 }
@@ -616,6 +653,7 @@ a {
     cursor: pointer;
     border-bottom: 1px solid #f9f9f9;
     transition: background-color 0.3s ease, border-color 0.3s ease;
+    align-items: center;
 }
 
 .search-result-item img {
@@ -623,11 +661,12 @@ a {
     height: 45px;
     object-fit: cover;
     border-radius: 4px;
+    flex-shrink: 0;
 }
 
 .search-result-info h4 {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #222;
     transition: color 0.3s ease;
 }
@@ -652,15 +691,16 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .notify-popup {
     background: #fff;
-    padding: 30px;
+    padding: 30px 20px;
     border-radius: 12px;
     text-align: center;
     max-width: 400px;
-    width: 90%;
+    width: 100%;
     transition: background-color 0.3s ease;
 }
 
@@ -681,11 +721,22 @@ a {
 .notify-popup h3 {
     color: #222;
     transition: color 0.3s ease;
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    margin-bottom: 10px;
 }
 
 .notify-popup p {
     color: #666;
     transition: color 0.3s ease;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.notify-popup .btn-allow,
+.notify-popup .btn-deny {
+    min-width: 120px;
+    min-height: 44px;
+    margin: 5px;
 }
 
 .btn-allow {
@@ -713,7 +764,7 @@ a {
 /* ===== ARTICLE PAGE STYLES ===== */
 .article-content {
     background: #fff;
-    padding: 30px;
+    padding: clamp(20px, 5vw, 30px);
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -722,23 +773,29 @@ a {
 .article-header h1 {
     color: #222;
     transition: color 0.3s ease;
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+    line-height: 1.3;
 }
 
 .article-meta {
     border-bottom-color: #eee;
     transition: border-color 0.3s ease;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .author-bio {
     background-color: #f8f9fa;
     border-left-color: #2c3e9c;
     transition: background-color 0.3s ease;
+    padding: 15px;
 }
 
 .also-read {
     background: linear-gradient(to right, #ffffff, #edf2fc);
     border-color: #b0c4de;
     transition: background 0.3s ease, border-color 0.3s ease;
+    padding: 15px;
 }
 
 .also-read::before {
@@ -748,6 +805,7 @@ a {
 .also-read a {
     color: #222;
     transition: color 0.3s ease;
+    word-break: break-word;
 }
 
 .also-read a:hover {
@@ -757,6 +815,13 @@ a {
 .article-body h2 {
     border-bottom-color: #f0f0f0;
     transition: border-color 0.3s ease;
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+    margin: 25px 0 15px;
+}
+
+.article-body p {
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 .article-body strong {
@@ -764,14 +829,22 @@ a {
     transition: background 0.3s ease;
 }
 
+.article-table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
 .article-table th {
     background-color: #f8f9fa;
     transition: background-color 0.3s ease;
+    padding: 10px;
 }
 
 .article-table td {
     border-bottom-color: #eee;
     transition: border-color 0.3s ease;
+    padding: 10px;
 }
 
 .article-table tbody tr:hover {
@@ -783,7 +856,7 @@ a {
 .sidebar-widget {
     background-color: #111;
     border-radius: 12px;
-    padding: 25px;
+    padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     margin-bottom: 30px;
     color: #fff;
@@ -791,84 +864,103 @@ a {
 
 .sidebar-widget h3 {
     border-bottom-color: rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
 }
 
 .latest-item {
     border-bottom-color: rgba(255, 255, 255, 0.3);
+    padding: 10px 0;
 }
 
 .latest-item a {
     color: #fff;
+    font-size: 0.95rem;
+    word-break: break-word;
 }
 
 .latest-date {
     color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
 }
 
 /* ===== COMMENTS ===== */
 .comments-section {
     border-top-color: #f0f0f0;
     transition: border-color 0.3s ease;
+    margin-top: 30px;
+    padding-top: 30px;
 }
 
 .section-title {
     color: #222;
     transition: color 0.3s ease;
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    margin-bottom: 20px;
 }
 
 .comment-form textarea,
 .comment-form input {
     border-color: #ddd;
     transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .submit-btn {
     background-color: #2c3e9c;
     transition: background-color 0.3s ease;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    min-height: 44px;
+    font-weight: 600;
 }
 
 .single-comment {
     background: #f9f9f9;
     transition: background-color 0.3s ease;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 /* ===== AUTHOR PAGE ===== */
 .author-profile {
     background: #fff;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
 }
 
 .author-avatar img {
     border-color: #edf2fc;
+    width: clamp(80px, 20vw, 120px);
+    height: auto;
+    border-radius: 50%;
 }
 
 .author-details h1 {
     color: #222;
     transition: color 0.3s ease;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-bottom: 5px;
 }
 
 .author-details p {
     color: #444;
     transition: color 0.3s ease;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-    .news-articles { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 768px) {
-    .header-content { flex-direction: column; gap: 15px; text-align: center; }
-    .main-nav ul { justify-content: center; gap: 15px; }
-    .article-image { height: 180px; }
-    .article-header h1 { font-size: 1.8rem; }
-    .utility-bar-inner { flex-direction: column; }
-    .ticker-label { font-size: 0.7rem; padding: 3px 6px; }
-    .ticker-content a { font-size: 0.85rem; }
-}
-
-@media (max-width: 600px) {
-    .news-articles { grid-template-columns: 1fr; }
+    font-size: 1rem;
 }
 
 /* ===== DARK MODE STYLES ===== */
@@ -1202,7 +1294,6 @@ a {
     color: #aaa !important;
 }
 
-
 /* ===== FONT AWESOME FIX ===== */
 .fa,
 .fas,
@@ -1291,4 +1382,184 @@ a {
 
 .fa-hashtag:before {
     content: "\f292";
+}
+
+/* ===== ADDITIONAL RESPONSIVE MEDIA QUERIES ===== */
+
+/* Large tablets and small desktops (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .news-articles {
+        gap: 15px;
+    }
+}
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+    .news-articles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .article-image {
+        height: 160px;
+    }
+}
+
+/* Small tablets and large phones (max-width: 768px) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav ul {
+        justify-content: center;
+    }
+    .utility-bar-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .top-actions {
+        justify-content: center;
+    }
+    .ticker-label {
+        font-size: 0.7rem;
+        padding: 3px 6px;
+    }
+    .ticker-content a {
+        font-size: 0.8rem;
+        margin-right: 30px;
+    }
+    .article-image {
+        height: 180px;
+    }
+    .author-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links {
+        gap: 15px;
+    }
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+}
+
+/* Phones (max-width: 576px) */
+@media (max-width: 576px) {
+    .news-articles {
+        grid-template-columns: 1fr;
+    }
+    .article-image {
+        height: 200px; /* Slightly larger for single column */
+    }
+    .pagination-controls {
+        gap: 5px;
+    }
+    .page-btn {
+        padding: 8px 12px;
+        min-width: 40px;
+    }
+    .ticker-content {
+        animation-duration: 30s; /* Slower on mobile for readability */
+    }
+    .ticker-content a {
+        font-size: 0.75rem;
+        margin-right: 20px;
+    }
+    .top-actions button span:not(.fa) {
+        /* Hide button text on very small screens, show only icons */
+        display: none;
+    }
+    .top-actions button {
+        width: 44px;
+        padding: 0;
+        justify-content: center;
+    }
+    #dark-mode-toggle {
+        width: 44px;
+    }
+    .search-result-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search-result-item img {
+        width: 100%;
+        height: auto;
+        max-height: 120px;
+    }
+}
+
+/* Very small phones (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        padding: 0 15px;
+    }
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    .page-title h2 {
+        font-size: 1.3rem;
+    }
+    .news-title {
+        font-size: 1rem;
+    }
+    .news-excerpt {
+        font-size: 0.85rem;
+    }
+    .article-content {
+        padding: 15px;
+    }
+    .article-header h1 {
+        font-size: 1.4rem;
+    }
+    .author-bio {
+        padding: 10px;
+    }
+    .also-read {
+        padding: 10px;
+    }
+    .sidebar-widget {
+        padding: 15px;
+    }
+    .comment-form textarea,
+    .comment-form input {
+        padding: 10px;
+    }
+    .submit-btn {
+        width: 100%;
+    }
+    .notification-bell {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        bottom: 15px;
+        left: 15px;
+    }
+    #scroll-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        bottom: 75px;
+        right: 15px;
+    }
+    .sub-toast {
+        bottom: 75px;
+        left: 15px;
+        font-size: 0.8rem;
+        padding: 10px 15px;
+    }
+}
+
+/* Landscape orientation for phones */
+@media (max-width: 768px) and (orientation: landscape) {
+    .news-articles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .article-image {
+        height: 150px;
+    }
 }
