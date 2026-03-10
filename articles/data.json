@@ -1,5 +1,60 @@
 [
     {
+        "id": 17,
+        "title": "Starlink showed a setup running satellite internet",
+        "date": "11 Mar, 2026",
+        "author": "Ultimate Schooling Editor",
+        "authorImg": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Tech",
+        "image": "20.webp",
+        "filename": "starlink-showed-a-setup-running-satellite-internet-17.html",
+        "excerpt": "Discover how Starlink's solar powered satellite internet is revolutionizing off-grid connectivity with its standalone system and renewable energy solu..."
+    },
+    {
+        "id": 16,
+        "title": "China\u2019s New H-20 Strategic Stealth Bomber Has 1 Flaw That Might Not Be Easy to Fix",
+        "date": "11 Mar, 2026",
+        "author": "Ultimate Schooling Editor",
+        "authorImg": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Home",
+        "image": "19.webp",
+        "filename": "chinas-new-h-20-strategic-stealth-bomber-has-1-flaw-that-might-not-be-16.html",
+        "excerpt": "China's H-20 bomber development faces delay due to engineering challenges, impacting its service entry and long-range strike capability...."
+    },
+    {
+        "id": 15,
+        "title": "Boost Your iPhone\u2019s Performance With Ultra Fast Mode in iOS 26",
+        "date": "11 Mar, 2026",
+        "author": "Ultimate Schooling Editor",
+        "authorImg": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Tech",
+        "image": "18.webp",
+        "filename": "boost-your-iphones-performance-with-ultra-fast-mode-in-ios-26-15.html",
+        "excerpt": "Boost your iPhone's performance with iOS 26's Ultra Fast Mode and optimize settings for a faster experience...."
+    },
+    {
+        "id": 14,
+        "title": "Oil Prices Drop as the G7 Considers Releasing Up to 400 Million Barrels",
+        "date": "11 Mar, 2026",
+        "author": "Ultimate Schooling Editor",
+        "authorImg": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Home",
+        "image": "17.webp",
+        "filename": "oil-prices-drop-as-the-g7-considers-releasing-up-to-400-million-barrel-14.html",
+        "excerpt": "Oil prices drop as G7 considers releasing up to 400 million barrels, impacting global oil supply and demand...."
+    },
+    {
+        "id": 13,
+        "title": "The $100 Million Mortgage Secret: Why Musk and Zuckerberg Choose Debt Over Cash",
+        "date": "11 Mar, 2026",
+        "author": "Ultimate Schooling Editor",
+        "authorImg": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Home",
+        "image": "16.webp",
+        "filename": "the-100-million-mortgage-secret-why-musk-and-zuckerberg-choose-debt-ov-13.html",
+        "excerpt": "Discover the $100 million mortgage secret used by Elon Musk and Mark Zuckerberg to leverage debt over cash for their real estate investments...."
+    },
+    {
         "id": 12,
         "title": "F-22 and F-35 Stealth Smasher: Russia\u2019s S-400 Air Defenses System Has 1 Mission",
         "date": "10 Mar, 2026",
