@@ -1,5 +1,27 @@
 [
     {
+        "id": 8,
+        "title": "Ugreen Releases Next-Generation Thunderbolt 5 Docking Stations",
+        "date": "10 Mar, 2026",
+        "author": "Ultimate Schooling Editor",
+        "authorImg": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Tech",
+        "image": "11.webp",
+        "filename": "ugreen-releases-next-generation-thunderbolt-5-docking-stations-8.html",
+        "excerpt": "Get the latest on UGREEN's next-generation Thunderbolt 5 docking stations, featuring 120 Gbps bandwidth and 8K 60Hz dual 6K display support...."
+    },
+    {
+        "id": 7,
+        "title": "Tencent launches OpenClaw-like workplace AI agent WorkBuddy",
+        "date": "10 Mar, 2026",
+        "author": "Ultimate Schooling Editor",
+        "authorImg": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Tech",
+        "image": "10.webp",
+        "filename": "tencent-launches-openclaw-like-workplace-ai-agent-workbuddy-7.html",
+        "excerpt": "Tencent launches WorkBuddy, an AI agent similar to OpenClaw, to automate workplace tasks and generate reports, with local installation and MCP support..."
+    },
+    {
         "id": 6,
         "title": "Forecasters Issue Urgent Warning as Heavy Snow Set to Intensify Overnight",
         "date": "10 Mar, 2026",
