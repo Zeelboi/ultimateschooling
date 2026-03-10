@@ -1,5 +1,59 @@
 [
-    
+    {
+        "id": 6,
+        "title": "Forecasters Issue Urgent Warning as Heavy Snow Set to Intensify Overnight",
+        "date": "10 Mar, 2026",
+        "author": "Ultimate Schooling Editor",
+        "authorImg": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Home",
+        "image": "9.webp",
+        "filename": "forecasters-issue-urgent-warning-as-heavy-snow-set-to-intensify-overni-6.html",
+        "excerpt": "Heavy snowfall forecast tonight, winter storm warning issued, drivers advised to exercise caution, and emergency services on high alert...."
+    },
+    {
+        "id": 5,
+        "title": "The $15 Trillion Digital Engine: Inside China\u2019s Tech Supremacy in 2026",
+        "date": "10 Mar, 2026",
+        "author": "Ultimate Schooling Editor",
+        "authorImg": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Home",
+        "image": "8.webp",
+        "filename": "the-15-trillion-digital-engine-inside-chinas-tech-supremacy-in-2026-5.html",
+        "excerpt": "Discover China's $15 trillion digital economy, driving 30% of its GDP, with 900 million internet users and a thriving tech sector...."
+    },
+    {
+        "id": 4,
+        "title": "Tesla\u2019s China supercharger network exceeds 2,500 stations as company launches hiring push",
+        "date": "10 Mar, 2026",
+        "author": "Ultimate Schooling Editor",
+        "authorImg": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Tech",
+        "image": "7.webp",
+        "filename": "teslas-china-supercharger-network-exceeds-2500-stations-as-company-lau-4.html",
+        "excerpt": "Tesla expands China Supercharger network to 2,500 stations, launches hiring push for charging team, aiming to reduce EV range anxiety and boost adopti..."
+    },
+    {
+        "id": 3,
+        "title": "After Iran and Venezuela, Kim Jong Un must decide how to handle Trump",
+        "date": "10 Mar, 2026",
+        "author": "Ultimate Schooling Editor",
+        "authorImg": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Home",
+        "image": "6.webp",
+        "filename": "after-iran-and-venezuela-kim-jong-un-must-decide-how-to-handle-trump-3.html",
+        "excerpt": "Kim Jong Un faces crucial decision on handling Trump after Iran and Venezuela, analyzing North Korea's US relations and nuclear deterrent...."
+    },
+    {
+        "id": 2,
+        "title": "Trump says US has won \u2018but we haven\u2019t won enough",
+        "date": "10 Mar, 2026",
+        "author": "Ultimate Schooling Editor",
+        "authorImg": "https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80",
+        "category": "Home",
+        "image": "5.webp",
+        "filename": "trump-says-us-has-won-but-we-havent-won-enough-2.html",
+        "excerpt": "Trump says US has won but we haven't won enough, latest Iran war news and updates...."
+    },
     {
         "id": 1,
         "title": "Samsung\u2019s 2026 Foldable Strategy: Why the Galaxy Z Flip 8 is All About Ergonomics",
